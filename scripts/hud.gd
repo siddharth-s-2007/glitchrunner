@@ -54,13 +54,12 @@ func _on_glitch_ended():
 	glitch_label.modulate = Color(1, 1, 1)
 
 func _on_player_died():
-	print("HUD: player died")  # debug
+	
 	await get_tree().create_timer(0.6).timeout
 	coins_result.text = "🪙 COINS:  %d" % player.coins
 	speed_result.text = "⚡ TOP SPEED:  %d" % int(player.top_speed)
 	game_over_panel.show()
 	restart_btn.grab_focus()
-	print("HUD: panel shown")  # debug
-
+	
 func _on_restart_pressed():
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
