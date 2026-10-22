@@ -1,18 +1,18 @@
 extends CharacterBody2D
 var speed = 100.0
 func _physics_process(delta):
-	# No movement — player comes to us!
+	
 	for i in get_slide_collision_count():
 		var col = get_slide_collision(i)
 		var body = col.get_collider()
 		if body.name == "Player" and not body.is_glitching:
 			body.die()
 
-	# to move to left
+	
 	velocity = Vector2(-speed, 0)
 
 	move_and_slide()
-	# to check if player hits and isnt glitching
+	
 	for i in get_slide_collision_count():
 		var col = get_slide_collision(i)
 		var body = col.get_collider()
