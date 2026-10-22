@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://mosli7bc75cy"]
+
+[ext_resource type="Texture2D" uid="uid://eqeffscbbiol" path="res://runner assets/runner.png" id="1_o7mal"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8tjj"]
+atlas = ExtResource("1_o7mal")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tdi5"]
+atlas = ExtResource("1_o7mal")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a6sq"]
+atlas = ExtResource("1_o7mal")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g7bs"]
+atlas = ExtResource("1_o7mal")
+region = Rect2(48, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8tjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tdi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a6sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g7bs")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]

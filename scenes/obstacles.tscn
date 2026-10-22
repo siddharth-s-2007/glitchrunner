@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b5nfjgw0g8ckf"]
+
+[ext_resource type="Texture2D" uid="uid://gen4vmdsc0oq" path="res://runner assets/block.png" id="1_7soh5"]
+[ext_resource type="Script" uid="uid://bia82cmfkagmb" path="res://scripts/obstacles.gd" id="1_b1ion"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(4.6, 9.800003)
+
+[node name="obstacle1" type="CharacterBody2D" unique_id=153040335]
+scale = Vector2(5, 5)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_b1ion")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=50143310]
+position = Vector2(0.5, -14.5)
+scale = Vector2(1, 2.0625)
+texture = ExtResource("1_7soh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1014635368]
+position = Vector2(0.09999996, -6.899998)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1694070187]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

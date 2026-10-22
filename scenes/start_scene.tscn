@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://mkjs83aygjw3"]
+
+[ext_resource type="Script" uid="uid://brh1kk078cbmv" path="res://scripts/start_scene.gd" id="1_cokmr"]
+
+[node name="StartScene" type="Control" unique_id=895465490]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cokmr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2117777854]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.039215688, 0.039215688, 0.078431375, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1126929950]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="title" type="Label" parent="VBoxContainer" unique_id=1044222686]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9607843, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "GLITCH RUNNER"
+horizontal_alignment = 1
+
+[node name="prompt" type="Label" parent="VBoxContainer" unique_id=245094704]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "press SPACE to start"
+horizontal_alignment = 1

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dw4xjmmp8xdmr"]
+
+[ext_resource type="Script" uid="uid://dhnk810xtrrnq" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="SpriteFrames" uid="uid://mosli7bc75cy" path="res://runner assets/runner.tres" id="2_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(3, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfkbx"]
+radius = 3.8078866
+
+[node name="player" type="CharacterBody2D" unique_id=1035276886]
+scale = Vector2(6, 6)
+collision_layer = 2
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=480846002]
+sprite_frames = ExtResource("2_qhqgy")
+autoplay = "default"
+frame_progress = 0.98428184
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734343786]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="glitch" type="Timer" parent="." unique_id=344510020]
+wait_time = 3.0
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1942108726]
+position = Vector2(9.5, -3.1666667)
+position_smoothing_enabled = true
+
+[node name="CoinDetector" type="Area2D" parent="." unique_id=1824981957]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoinDetector" unique_id=360493725]
+position = Vector2(-0.16666667, 1.1666667)
+shape = SubResource("CircleShape2D_lfkbx")
